@@ -27,4 +27,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#fff',
     },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> c54df2220f0f88157c982654eaba574519609cc2
