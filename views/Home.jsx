@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View, Button } from 'react-native';
-import { ProdutoCard } from '../components/ProdutoCard'
+import  ProdutoCard from '../components/ProdutoCard'
 
-export default function Home( {navigation, route} ) {
+export default function Home() {
     
     return (
         <View style={styles.container}>
@@ -11,7 +11,7 @@ export default function Home( {navigation, route} ) {
                 preco={300.45}
             />
             <ProdutoCard 
-                path={'https://images.pexels.com/photos/336948/pexels-photo-336948.jpeg?auto=compress&cs=tinysrgb&w=1600'}
+                path={'https://images.pexels.com/photos/336948/pexels-photo-336948.jpeg'}
                 nome={'Celular 2'}
                 preco={3432.95}
             />
