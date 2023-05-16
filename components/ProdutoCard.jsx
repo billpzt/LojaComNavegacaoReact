@@ -13,7 +13,8 @@ export default function ProdutoCard(props) {
         </View>
         <View>
           <Text style={styles.nome}>{props.nome}</Text>
-          <Text style={styles.preco}>{props.preco}</Text>
+          <Text style={styles.preco}>R${props.preco}</Text>
+          <Text style={styles.quant}>Qtd: {props.quantidade}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -28,13 +29,18 @@ const styles = StyleSheet.create({
     backgroundColor: "lightblue",
     display: "flex",
     flexDirection: "row",
+    width: 300
   },
   image: {
     width: 100,
     height: 100,
+    marginRight: 10,
   },
-  nome: {},
+  nome: {
+    fontSize: 22,
+  },
   preco: {},
+  quant: {}
 });
 
 {
