@@ -1,12 +1,10 @@
 import { Text, Image, View, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function ProdutoCard(props) {
-    const { navigation, route } = props;
-    const navegador = () => {navigation.navigate('Detalhes', props)};
 
   return (
     <TouchableOpacity
-        onPress={() => navegador()}>
+        onPress={props.action}>
       <View style={styles.card}>
         <View>
           <Image style={styles.image} source={{ uri: props.path }} />

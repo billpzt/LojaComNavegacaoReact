@@ -1,8 +1,9 @@
 import { Text } from "react-native";
 
 export default function Detalhes( {route} ) {
-    console.log(route.params);
+    const produto = route.params;
+    console.log(produto);
     return (
-        <Text>Os detalhes ficam aqui</Text>
+        <Text>{produto.nome}</Text>
     )
 }
