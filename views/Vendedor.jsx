@@ -3,6 +3,11 @@ import { Text } from 'react-native';
 export default function Vendedor( {route} ) {
     const vendedor = route.params;
     return (
-        <Text>Detalhes sobre o vendedor</Text>
+        <View>
+            <Text>{vendedor.nome}</Text>
+            <Text>Detalhes sobre o vendedor</Text>
+            <Text>Detalhes sobre o vendedor</Text>
+            <Text>Detalhes sobre o vendedor</Text>
+        </View>
     )
 }

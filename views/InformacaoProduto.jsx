@@ -1,21 +1,28 @@
-import { Text, Image } from 'react-native';
+import { Text, Image, StyleSheet, View } from 'react-native';
 
 export default function InformacaoProduto( {route} ) {
     const produto = route.params;
 
     return (
-        <View>
-            <Image style={styles.image} source={{ uri: props.path }} />
-            <Text>Informações sobre o produto aqui.</Text>
+        <View style={styles.container}>
+            <Image style={styles.image} source={{ uri: produto.imageUrl }} />
+            <Text>{produto.descricao}</Text>
         </View>
         
     )
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "lightgray",
+        // width: 500,
+      },
     image: {
-      width: 100,
-      height: 100,
-      marginRight: 10,
+      width: 50,
+      height: 50,
+    //   marginRight: 10,
     },
   });

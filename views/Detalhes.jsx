@@ -10,25 +10,34 @@ import InformacaoProduto from "./InformacaoProduto";
 const Tab = createBottomTabNavigator();
 
 export default function Detalhes( {route} ) {
-    const produto = route.params;
-    console.log(produto);
+    const item = route.params;
     return (
-        <View style={styles.container}>
-            <Text>{produto.nome}</Text>
-            <Tab.Navigator>
-                <Tab.Screen name="Info" component={InformacaoProduto} />
-                <Tab.Screen name="Vendedor" component={Vendedor} />
-            </Tab.Navigator>
-        </View>
+        <Tab.Navigator screenOptions={{ headerShown: false }} style={styles.navigator}>
+            <Tab.Screen 
+                name="Info" 
+                component={InformacaoProduto}
+                initialParams={item.produto} />
+            <Tab.Screen 
+                name="Vendedor" 
+                component={Vendedor}
+                initialParams={item.vendedor}
+                    />
+        </Tab.Navigator>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
-        // width: '1vw'
+        backgroundColor: 'red',
+        width: '100%',
+        height: '100%'
     },
+    screen: {
+        width: 400
+    },
+
 });
