@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Home from './views/Home'
 import About from './views/About'
 import Detalhes from './views/Detalhes'
@@ -12,7 +13,8 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Detalhes" component={Detalhes} />
@@ -32,7 +34,8 @@ export default function App() {
           component={About}
         />
       </Stack.Navigator> */}
-    </NavigationContainer>
+    </NavigationContainer>      
+    </GestureHandlerRootView>
 )}
 
 const styles = StyleSheet.create({
