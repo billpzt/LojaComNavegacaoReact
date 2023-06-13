@@ -13,6 +13,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Detalhes( {route} ) {
     const item = route.params;
+    console.log( item );
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }} style={styles.navigator}>
             <Tab.Screen 
@@ -22,19 +23,19 @@ export default function Detalhes( {route} ) {
             <Tab.Screen 
                 name="Especificacoes" 
                 component={Especificacoes}
-                initialParams={item.especificacoes} />
+                initialParams={item.produto.detalhes} />
             <Tab.Screen 
                 name="Vendedor" 
                 component={Vendedor}
                 initialParams={item.vendedor} />
             <Tab.Screen 
+            name="Comentarios" 
+            component={Comentarios}
+            initialParams={item.comentarios} />
+            <Tab.Screen 
                 name="Duvidas" 
                 component={Duvidas}
                 initialParams={item.duvidas} />
-            <Tab.Screen 
-                name="Comentarios" 
-                component={Comentarios}
-                initialParams={item.comentarios} />
         </Tab.Navigator>
     )
 }

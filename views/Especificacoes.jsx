@@ -2,13 +2,14 @@ import { Text, Image, StyleSheet, View } from 'react-native';
 
 export default function Especificacoes( {route} ) {
     const produto = route.params;
+    console.log(produto);
 
     return (
         <View style={styles.container}>
-            <Text>Tamanho: </Text>
+            <Text>Tamanho: {produto.tamanho}</Text>
             <Text>Peso: </Text>
             <Text>Altura: </Text>
-            <Text>Material: </Text>
+            <Text>Cor: </Text>
         </View>
         
     )

@@ -15,7 +15,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Home" useLegacyImplementation={true}>
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Detalhes" component={Detalhes} />
         <Drawer.Screen name="Sobre" component={About} />

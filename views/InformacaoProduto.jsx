@@ -5,7 +5,10 @@ export default function InformacaoProduto( {route} ) {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: produto.imageUrl }} />
+            <Image 
+              style={styles.image} 
+              source={{ uri: produto.imageUrl }} />
+            <Text>{produto.nome}</Text>
             <Text>{produto.descricao}</Text>
         </View>
         
