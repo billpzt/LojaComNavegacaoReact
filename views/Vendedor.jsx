@@ -1,13 +1,14 @@
 import { Text, View } from 'react-native';
 
-export default function Vendedor( {route} ) {
-    const vendedor = route.params;
+export default function Vendedor( {vendedor} ) {
+    // const vendedor = route.params;
+    console.log(vendedor);
     return (
         <View>
-            <Text>{vendedor.nome}</Text>
-            <Text>Detalhes sobre o vendedor</Text>
-            <Text>Detalhes sobre o vendedor</Text>
-            <Text>Detalhes sobre o vendedor</Text>
+            <Text>Nome: {vendedor.nome}</Text>
+            <Text>Telefone: {vendedor.telefone}</Text>
+            <Text>E-mail: {vendedor.email}</Text>
+            <Text>Nota: {vendedor.nota}</Text>
         </View>
     )
 }

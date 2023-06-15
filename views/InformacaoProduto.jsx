@@ -1,7 +1,6 @@
 import { Text, Image, StyleSheet, View } from 'react-native';
 
-export default function InformacaoProduto( {route} ) {
-    const produto = route.params;
+export default function InformacaoProduto( {produto} ) {
 
     return (
         <View style={styles.container}>

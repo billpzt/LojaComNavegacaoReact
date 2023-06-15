@@ -1,31 +1,31 @@
-import { Text, Image, StyleSheet, View } from 'react-native';
+import { Text, Image, StyleSheet, View } from "react-native";
 
-export default function Especificacoes( {route} ) {
-    const produto = route.params;
-    console.log(produto);
+export default function Especificacoes({ produto }) {
+  // const produto = route.params;
+  // console.log(produto);
 
-    return (
-        <View style={styles.container}>
-            <Text>Tamanho: {produto.tamanho}</Text>
-            <Text>Peso: </Text>
-            <Text>Altura: </Text>
-            <Text>Cor: </Text>
-        </View>
-        
-    )
+  return (
+    <View style={styles.container}>
+      {/* <Text>{produto.nome}</Text> */}
+      <Text>Tamanho: {produto.tamanho}</Text>
+      <Text>Peso: {produto.peso}g</Text>
+      <Text>Altura: {produto.altura}cm</Text>
+      <Text>Cor: {produto.cor}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "lightgray",
-        // width: 500,
-      },
-    image: {
-      width: 50,
-      height: 50,
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "lightgray",
+    // width: 500,
+  },
+  image: {
+    width: 50,
+    height: 50,
     //   marginRight: 10,
-    },
-  });
+  },
+});

@@ -16,22 +16,22 @@ export default function Detalhes( {route} ) {
     console.log( item );
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }} style={styles.navigator}>
-            <Tab.Screen 
-                name="Info (Detalhes)" 
-                component={InformacaoProduto}
-                initialParams={item.produto} />
-            <Tab.Screen 
-                name="Especificacoes" 
-                component={Especificacoes}
-                initialParams={item.produto.detalhes} />
-            <Tab.Screen 
-                name="Vendedor" 
-                component={Vendedor}
-                initialParams={item.vendedor} />
-            <Tab.Screen 
+            <Tab.Screen name="Info (Detalhes)">
+                {() => <InformacaoProduto produto={item.produto}/>}
+            </Tab.Screen>
+            <Tab.Screen name="Especificacoes">
+                {() => <Especificacoes produto={item.produto.detalhes}/>}
+            </Tab.Screen>
+            <Tab.Screen name="Vendedor">
+                {() => <Vendedor vendedor={item.vendedor}/>}
+            </Tab.Screen>
+            <Tab.Screen name="Comentarios">
+                {() => <Comentarios comentarios={item.comentarios}/>}
+            </Tab.Screen>
+            {/* <Tab.Screen 
             name="Comentarios" 
             component={Comentarios}
-            initialParams={item.comentarios} />
+            initialParams={item.comentarios} /> */}
             <Tab.Screen 
                 name="Duvidas" 
                 component={Duvidas}
