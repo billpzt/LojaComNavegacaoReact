@@ -20,20 +20,6 @@ export default function App() {
         <Drawer.Screen name="Detalhes" component={Detalhes} />
         <Drawer.Screen name="Sobre" component={About} />
       </Drawer.Navigator>
-      {/* <Stack.Navigator>
-        <Stack.Screen
-          name='Home'
-          component={Home}
-        />
-        <Stack.Screen
-          name='Detalhes'
-          component={Detalhes}
-        />
-        <Stack.Screen
-          name='About'
-          component={About}
-        />
-      </Stack.Navigator> */}
     </NavigationContainer>      
     </GestureHandlerRootView>
 )}

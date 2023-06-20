@@ -1,21 +1,16 @@
 import { Text, Image, View, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function ProdutoCard(props) {
+export default function RespostaCard(props) {
 
   return (
-    <TouchableOpacity
-        onPress={props.action}>
       <View style={styles.card}>
         <View>
-          <Image style={styles.image} source={{ uri: props.path }} />
-        </View>
-        <View>
-          <Text style={styles.nome}>{props.nome}</Text>
-          <Text style={styles.preco}>R${props.preco}</Text>
-          <Text style={styles.quant}>Qtd: {props.quantidade}</Text>
+        <Text style={styles.comentario}>{props.resposta}</Text>
+          <Text style={styles.nome}>{props.nomeUsuario}</Text>
+          <Text style={styles.data}>{props.dataPublicacao}</Text>
+          
         </View>
       </View>
-    </TouchableOpacity>
   );
 }
 
@@ -29,16 +24,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: 300
   },
-  image: {
-    width: 50,
-    height: 50,
-    marginRight: 10,
-  },
   nome: {
-    fontSize: 20,
+    // fontSize: 10,
   },
-  preco: {},
-  quant: {}
+  publicado: {},
+  comentario: {},
+  nota: {},
 });
 
 {

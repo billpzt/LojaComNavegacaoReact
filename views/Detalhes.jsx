@@ -28,14 +28,9 @@ export default function Detalhes( {route} ) {
             <Tab.Screen name="Comentarios">
                 {() => <Comentarios comentarios={item.comentarios}/>}
             </Tab.Screen>
-            {/* <Tab.Screen 
-            name="Comentarios" 
-            component={Comentarios}
-            initialParams={item.comentarios} /> */}
-            <Tab.Screen 
-                name="Duvidas" 
-                component={Duvidas}
-                initialParams={item.duvidas} />
+            <Tab.Screen name="Duvidas">
+                {() => <Duvidas duvidas={item.duvidas}/>}
+            </Tab.Screen>
         </Tab.Navigator>
     )
 }
@@ -53,5 +48,8 @@ const styles = StyleSheet.create({
     screen: {
         width: 400
     },
+    navigator: {
+        backgroundColor: "#66CED6"
+    }
 
 });
