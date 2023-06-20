@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, Button } from 'react-native';
 export default function About({navigation}) {
     return (
         <View style={styles.container}>
-            <Text>About</Text>
+            <Text>Esse aplicativo é uma loja com vários produtos incríveis!</Text>
             <Button 
                 title="Ir para Home" 
                 onPress={() => {
